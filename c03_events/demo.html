@@ -15,102 +15,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="refresh" content=";url=">
     <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
-    <link rel="stylesheet" type="text/css" href=""/>
-    <style type="text/css">
-      /***************************************Default Styles************************************** */
-      * {
-        box-sizing: border-box !important;
-        margin: 0;
-        padding: 0;
-      }
-
-      html {
-        font-size: 16px;
-      }
-
-      body {
-        font: 62.5% Verdana, Helvetica, Arial, sans-serif;
-      }
-
-      #container {
-        font-size: 1.2em;
-        margin: 10px 2em;
-        background-color: ghostwhite;
-      }
-
-      h1 {
-        font-size: 2.5em;
-        margin-bottom: 0;
-      }
-
-      h2 {
-        font-size: 1.3em;
-        margin-bottom: .5em;
-      }
-
-      h3 {
-        font-size: 1.1em;
-        margin-bottom: 0;
-      }
-
-      code {
-        font-size: 1.2em;
-      }
-
-      a {
-        color: #06581F;
-      }
-
-      /***************************************Chapter Styles************************************** */
-      .poem {
-        margin: 0 5em;
-      }
-
-      .chapter {
-        margin: 1em;
-      }
-
-      .Switcher {
-        position: fixed;
-        top: 1rem;
-        right: 1rem;
-        border-radius: 0.5em;
-        background-color: #DDDDDD;
-        border: 1px solid #000000;
-        padding: 1em;
-        font-size: 1em;
-      }
-
-      #header {
-        clear: both;
-      }
-
-      body.large .chapter {
-        font-size: 1.5em;
-      }
-
-      body.narrow .chapter {
-        width: 250px;
-      }
-
-      .selected {
-        font-weight: bold;
-        background-color: #AAFFAA;
-      }
-
-      button {
-        padding: 3px;
-      }
-
-      .hidden {
-        display: none;
-      }
-
-      .hover {
-        cursor: pointer;
-        background-color: #AAFFAA;
-      }
-    </style>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="demo.css"/>
+    <style type="text/css"></style>
+    <!-- js -->
+    <script src="../assets/js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="demo.js"></script>
   </head>
   <body>
     <div id="container">
@@ -170,7 +80,7 @@
           Scrooge Scrooge, and sometimes Marley, but he answered to both names. It was all the same to him.
         </p>
         <p>
-          Oh! But he was a tight-fisted hand at the grind-stone, Scrooge! a squeezing, wrenching, grasping, scraping,
+          Oh! But he was a tight-foisted hand at the grind-stone, Scrooge! a squeezing, wrenching, grasping, scraping,
           clutching, covetous, old sinner! Hard and sharp as flint, from which no steel had ever struck out generous
           fire; secret, and self-contained, and solitary as an oyster. The cold within him froze his old features,
           nipped his pointed nose, shrivelled his cheek, stiffened his gait; made his eyes red, his thin lips blue; and
@@ -199,64 +109,5 @@
         </p>
       </div>
     </div>
-    <!-- js -->
-    <script src="../assets/js/jquery-3.6.0.js"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function () {
-            /*  */
-            const body = jQuery("body");
-            const switcher = jQuery("#Switcher")
-            const switcherButtons = jQuery("#Switcher > button");
-            const switcherDefault = jQuery("#switcher-default");
-            const switcherNarrow = jQuery("#switcher-narrow");
-            const switcherLarge = jQuery("#switcher-large");
-            /*  */
-            switcher.click(function () {
-                switcherButtons.toggleClass("hidden");
-            });
-            switcher.hover(
-                function () { jQuery(this).addClass("hover") },
-                function () { jQuery(this).removeClass("hover") }
-            );
-            switcherButtons.click(function (event) {
-                body.removeClass();
-                jQuery("#Switcher > button").removeClass("selected");
-                jQuery(this).addClass("selected");
-                event.stopPropagation();
-            });
-            switcherNarrow.click(function (event) {
-                body.addClass('narrow');
-                event.stopPropagation();
-            });
-            switcherLarge.click(function (event) {
-                body.addClass('large');
-                event.stopPropagation();
-            });
-
-            /* Test 1 */
-            jQuery("#container").mousemove(function (event) {
-                /* 相对于网页 */
-                console.log('page: ' + event.pageX + ',' + event.pageY);
-                /* 相对浏览器窗口 */
-                console.log('client: ' + event.clientX + ',' + event.clientX);
-                /* 相对于鼠标事件的目标元素 */
-                console.log('offset: ' + event.offsetX + ',' + event.offsetY);
-                /* 相对于屏幕 */
-                console.log('screen: ' + event.screenX + ',' + event.screenY);
-            });
-
-            /* Test 2 */
-            jQuery(document).keydown(function (event) {
-                console.log(event.keyCode);
-                if (event.keyCode === 68) {
-                    switcherDefault.click();
-                } else if (event.keyCode === 78) {
-                    switcherNarrow.click();
-                } else if (event.keyCode === 76) {
-                    switcherLarge.click();
-                }
-            });
-        });
-    </script>
   </body>
 </html>

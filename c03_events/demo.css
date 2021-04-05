@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+/***************************************Default Styles************************************** */
+* {
+  box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font: 62.5% Verdana, Helvetica, Arial, sans-serif;
+}
+
+#container {
+  font-size: 1.2em;
+  margin: 10px 2em;
+  background-color: ghostwhite;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 1.3em;
+  margin-bottom: .5em;
+}
+
+h3 {
+  font-size: 1.1em;
+  margin-bottom: 0;
+}
+
+code {
+  font-size: 1.2em;
+}
+
+a {
+  color: #06581F;
+}
+
+/*************************************** Chapter Styles *********************************************************** */
+.poem {
+  margin: 0 5em;
+}
+
+.chapter {
+  margin: 1em;
+}
+
+.Switcher {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  border-radius: 0.5em;
+  background-color: #DDDDDD;
+  border: 1px solid #000000;
+  padding: 1em;
+  font-size: 1em;
+}
+
+#header {
+  clear: both;
+}
+
+body.large .chapter {
+  font-size: 1.5em;
+}
+
+body.narrow .chapter {
+  width: 250px;
+}
+
+.selected {
+  font-weight: bold;
+  background-color: #AAFFAA;
+}
+
+button {
+  padding: 3px;
+}
+
+.hidden {
+  display: none;
+}
+
+.hover {
+  cursor: pointer;
+  background-color: #AAFFAA;
+}
+
+/* 2021-04-03 Saturday 13:13 */

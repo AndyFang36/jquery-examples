@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
+  /* 保证在用户禁用JavaScript脚本的情况下，复制功能也会被禁止 */
+  user-select: none;
+  -moz-user-select: none; /* Firefox私有属性 */
+  -webkit-user-select: none; /* WebKit内核私有属性 */
+  -ms-user-select: none; /* IE私有属性(IE10及以后) */
+  -khtml-user-select: none; /* KHTML内核私有属性 */
+  -o-user-select: none; /* Opera私有属性 */
+}
+
+*::selection {}
+
+
+/* 2021-04-02 Friday 10:26 */

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return false" onselect="return false">
+  <head>
+    <title>Plugin</title>
+    <meta charset="UTF-8"/>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/initialization.css">
+    <link rel="stylesheet" type="text/css" href="demo.css"/>
+    <style type="text/css"></style>
+    <!-- JS -->
+    <script type="text/javascript" src="../assets/js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../assets/js/initialization.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.plugin.cycle2.js"></script>
+    <script type="text/javascript" src="demo.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Selected jQuery Books</h1>
+      <ul id="books" class="cycle-slideshow">
+        <li>
+          <img src="image/jq-game.jpg" alt="jQuery Game Development Essentials"/>
+          <div class="title">jQuery Game Development Essentials</div>
+          <div class="author">Salim Arsever</div>
+        </li>
+        <li>
+          <img src="image/jqmobile-cookbook.jpg" alt="jQuery Mobile Cookbook"/>
+          <div class="title">jQuery Mobile Cookbook</div>
+          <div class="author">Chetan K Jain</div>
+        </li>
+        <li>
+          <img src="image/jquery-designers.jpg" alt="jQuery for Designers"/>
+          <div class="title">jQuery for Designers</div>
+          <div class="author">Natalie MacLees</div>
+        </li>
+        <li>
+          <img src="image/jquery-hotshot.jpg" alt="jQuery Hotshot"/>
+          <div class="title">jQuery Hotshot</div>
+          <div class="author">Dan Wellman</div>
+        </li>
+        <li>
+          <img src="image/jqui-cookbook.jpg" alt="jQuery UI Cookbook"/>
+          <div class="title">jQuery UI Cookbook</div>
+          <div class="author">Adam Boduch</div>
+        </li>
+        <li>
+          <img src="image/mobile-apps.jpg" alt="Creating Mobile Apps with jQuery Mobile"/>
+          <div class="title">Creating Mobile Apps with jQuery Mobile</div>
+          <div class="author">Shane Gliser</div>
+        </li>
+        <li>
+          <img src="image/drupal-7.jpg" alt="Drupal 7 Development by Example"/>
+          <div class="title">Drupal 7 Development by Example</div>
+          <div class="author">Kurt Madel</div>
+        </li>
+        <li>
+          <img src="image/wp-mobile-apps.jpg" alt="WordPress Mobile Applications with PhoneGap"/>
+          <div class="title">WordPress Mobile Applications with PhoneGap</div>
+          <div class="author">Yuxian Eugene Liang</div>
+        </li>
+      </ul>
+      <div class="cycle-slideshow"
+           data-cycle-fx="scrollHorz"
+           data-cycle-timeout="0"
+           data-cycle-prev="#prev"
+           data-cycle-next="#next">
+        <img src="image/jq-game.jpg"/>
+        <img src="image/jqmobile-cookbook.jpg"/>
+        <img src="image/jquery-designers.jpg"/>
+        <img src="image/jquery-hotshot.jpg"/>
+      </div>
+      <div class="center">
+        <a href=# id="prev">Prev</a>
+        <a href=# id="next">Next</a>
+      </div>
+    </div>
+  </body>
+</html>
